@@ -13,7 +13,8 @@
     "lib": ["esnext", "dom"],
     "paths": {
       "@/*" : ["./src/*"]
-    }
+    },
+    "suppressImplicitAnyIndexErrors": true,//解决TypeScript-元素隐式地具有"any"类型，因为类型"string"的表达式不能用于索引类型
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
