@@ -1,0 +1,83 @@
+.contain {
+  margin: 240px auto;
+  width: 400px;
+  height: 340px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 70px 74px 0;
+  text-align: center;
+  position: relative;
+  z-index: 99;
+  &::after {
+    position: absolute;
+    z-index: -10;
+    content: "";
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 398px;
+    height: 338px;
+    border-radius: 10px;
+    animation: roaming 5s infinite;
+  }
+  p {
+    width: 400px;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+  .el-button {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, red, yellow, green, blue);
+    border-radius: var(--el-border-radius-base);
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  .el-input {
+    &:hover {
+      border: 1px solid var(--el-color-primary);
+      border-radius: var(--el-border-radius-base);
+    }
+  }
+}
+@keyframes roaming {
+  0% {
+    border-left: 1px solid red;
+    border-top: 1px solid yellow;
+    border-right: 1px solid green;
+    border-bottom: 1px solid blue;
+  }
+  25% {
+    border-left: 1px solid blue;
+    border-top: 1px solid red;
+    border-right: 1px solid yellow;
+    border-bottom: 1px solid green;
+  }
+  50% {
+    border-left: 1px solid green;
+    border-top: 1px solid blue;
+    border-right: 1px solid red;
+    border-bottom: 1px solid yellow;
+  }
+  75% {
+    border-left: 1px solid yellow;
+    border-top: 1px solid green;
+    border-right: 1px solid blue;
+    border-bottom: 1px solid red;
+  }
+  100% {
+    border-left: 1px solid red;
+    border-top: 1px solid yellow;
+    border-right: 1px solid green;
+    border-bottom: 1px solid blue;
+  }
+}

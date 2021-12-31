@@ -4,6 +4,7 @@ export const staticRouter = [
   {
     path: "/",
     name: "layout",
+    redirect: "/login",
     component: () =>
       import(/* webpackChunkName: "layout" */ "@/layout/index.vue"),
     children: [],

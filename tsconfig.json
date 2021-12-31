@@ -14,6 +14,7 @@
     "paths": {
       "@/*" : ["./src/*"]
     },
+    "plugins": [{"name": "typescript-plugin-css-modules"}],//tsx中引入样式文件时进行类名提示
     "suppressImplicitAnyIndexErrors": true,//解决TypeScript-元素隐式地具有"any"类型，因为类型"string"的表达式不能用于索引类型
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]

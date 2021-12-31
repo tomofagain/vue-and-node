@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import "element-plus/dist/index.css";
 import router, { setupRouter } from "./router";
 import initComponents from "./components/index";
 import { setupIcon } from "./plugins/icon";
@@ -12,5 +13,4 @@ const app = createApp(App);
 setupRouter(app);
 setupIcon(app);
 initComponents(app);
-
 router.isReady().then(() => app.mount("#app"));
